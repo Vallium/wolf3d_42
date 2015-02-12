@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   wolf3d.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adoussau <antoine@doussaud.org>            +#+  +:+       +#+        */
+/*   By: aalliot <aalliot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/01/13 19:13:47 by adoussau          #+#    #+#             */
-/*   Updated: 2015/01/13 19:13:50 by adoussau         ###   ########.fr       */
+/*   Created: 2015/01/13 19:13:47 by aalliot           #+#    #+#             */
+/*   Updated: 2015/01/13 19:13:50 by aalliot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include "libft.h"
 # include <fcntl.h>
 # include <string.h>
+# include <unistd.h>
 # include <math.h>
 # include "libft.h"
 

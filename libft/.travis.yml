@@ -6,6 +6,4 @@ compiler:
 install:
 
 script:
-  - make -C libft libft.a -j
-  - make -C libft libft_debug.a -j
-  - make -C libft libft.so -j
+  - make -j

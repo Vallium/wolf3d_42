@@ -1,16 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isupper.c                                       :+:      :+:    :+:   */
+/*   ft_intlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adoussau <antoine@doussaud.org>            +#+  +:+       +#+        */
+/*   By: aalliot <aalliot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/04 10:57:30 by adoussau          #+#    #+#             */
-/*   Updated: 2014/11/04 11:00:35 by adoussau         ###   ########.fr       */
+/*   Created: 2015/01/02 16:55:07 by aalliot           #+#    #+#             */
+/*   Updated: 2015/01/02 16:55:39 by aalliot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isupper(int c)
+int			ft_intlen(int i)
 {
-	return (c >= 'A' && c <= 'Z');
+	int		ret;
+
+	ret = 1;
+	while (i /= 10)
+		ret++;
+	return (ret);
 }

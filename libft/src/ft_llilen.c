@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isspace.c                                       :+:      :+:    :+:   */
+/*   ft_llilen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adoussau <antoine@doussaud.org>            +#+  +:+       +#+        */
+/*   By: aalliot <aalliot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/04 19:29:20 by adoussau          #+#    #+#             */
-/*   Updated: 2014/11/05 14:44:07 by adoussau         ###   ########.fr       */
+/*   Created: 2015/01/02 16:55:07 by aalliot           #+#    #+#             */
+/*   Updated: 2015/01/02 16:55:39 by aalliot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isspace(int c)
+int			ft_llilen(long long int i)
 {
-	return (c == ' '
-	|| c == '\t'
-	|| c == '\r'
-	|| c == '\v'
-	|| c == '\n'
-	|| c == '\f');
+	int		ret;
+
+	ret = 1;
+	while (i /= 10)
+		ret++;
+	return (ret);
 }
