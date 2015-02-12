@@ -63,14 +63,16 @@ endif
 $(shell mkdir -p $(STATIC_DIR) $(DEBUG_DIR))
 
 all: $(STATIC_EXE)
-	@echo "Compilation terminee. (realease)"
+
 debug: $(DEBUG_EXE)
-	@echo "Compilation terminee. (debug)"
+
 $(DEBUG_EXE): $(DEBUG_OBJ) $(LIBFT_DEBUG)
 	$(CC) -O0 -I $(HEAD_DIR) -I $(LIBFT_HEAD) -o $(DEBUG_EXE) $(DEBUG_OBJ) $(LIBFT_DEBUG) $(SDL) $(FLAGS) -g
+	@echo "\n\033[32mCompilation complete. (debug)\n"
 
 $(STATIC_EXE): $(STATIC_OBJ) $(LIBFT_STATIC)
 	$(CC) $(OPTI) -I $(HEAD_DIR) -I $(LIBFT_HEAD) -o $@ $(STATIC_OBJ) $(LIBFT_STATIC) $(SDL) $(FLAGS)
+	@echo "\n\033[32mCompilation complete. (realease)\n"
 
 $(STATIC_DIR)/%.o: $(SRC_DIR)/%.c
 	$(CC) $(OPTI) -I $(HEAD_DIR) -I $(LIBFT_HEAD) -o $@ -c $< $(SDL) $(FLAGS)
